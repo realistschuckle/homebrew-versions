@@ -32,7 +32,7 @@ class Allegro5 < Formula
       return 0;
     }
     eof
-    system "gcc -I#{include} -L#{lib} -lstdc++ -lallegro -lallegro_main -o allegro_test allegro_test.cpp"
+    system "#{ENV.cxx} -I#{include} -L#{lib} -lallegro -lallegro_main -o allegro_test allegro_test.cpp"
     system "./allegro_test"
   end
 end
