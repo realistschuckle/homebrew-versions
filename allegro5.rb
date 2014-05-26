@@ -2,8 +2,8 @@ require 'formula'
 
 class Allegro5 < Formula
   homepage 'http://www.allegro.cc'
-  url 'https://downloads.sourceforge.net/project/alleg/allegro/5.0.9/allegro-5.0.9.tar.gz'
-  sha1 '7d05bc3d59b60a22796e9938f0b9a463c33d4b30'
+  url 'https://sourceforge.net/projects/alleg/files/allegro/5.0.10/allegro-5.0.10.tar.gz'
+  sha1 'f2b4535ac6fc6810f915dd7e75b27f967161726f'
 
   head 'git://git.code.sf.net/p/alleg/allegro', :branch => '5.1'
 
