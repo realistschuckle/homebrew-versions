@@ -19,4 +19,20 @@ class Allegro5 < Formula
     system "cmake", ".", *std_cmake_args
     system "make install"
   end
+
+  test do
+    (testpath/'allegro_test.cpp').write <<-eof
+    #include <assert.h>
+    #include <allegro5/allegro5.h>
+
+    int main(int n, char** c) {
+      if (!al_init()) {
+        return 1;
+      }
+      return 0;
+    }
+    eof
+    system "gcc -I#{include} -L#{lib} -lstdc++ -lallegro -lallegro_main -o allegro_test allegro_test.cpp"
+    system "./allegro_test"
+  end
 end
